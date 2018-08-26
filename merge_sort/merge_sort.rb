@@ -2,12 +2,11 @@ def merge_sort(arr)
   return arr if arr.length == 1
   return nil if arr.length == []
 
-  result = []
   mid = arr.length / 2
   left_side = arr[0...mid]
   right_side = arr[mid..-1]
 
-  result += merge(merge_sort(left_side), merge_sort(right_side))
+  merge(merge_sort(left_side), merge_sort(right_side))
 end
 
 def merge(left_arr, right_arr)
