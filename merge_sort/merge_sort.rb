@@ -1,5 +1,6 @@
 require "byebug"
-arr = [8, 2, 3, 5, 1, 9, 9, 7, 5, 0]
+# arr = [8, 2, 3, 5, 1, 9, 9, 7, 5, 0]
+arr = [8, 2, 3]
 
 def merge_sort(arr)
   return arr if arr.length == 1
@@ -17,6 +18,9 @@ def merge_sort(arr)
 end
 
 def merge(left_arr, right_arr)
+  # p left_arr if left_arr.length > 1
+  # p right_arr if right_arr.length > 1
+
   result = []
   # byebug
   while left_arr != [] && right_arr != []
@@ -27,7 +31,7 @@ def merge(left_arr, right_arr)
     end
   end
 
-  result = left_arr + right_arr
+  result += right_arr + left_arr
 end
 
 p merge_sort(arr)
